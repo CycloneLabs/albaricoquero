@@ -17,6 +17,7 @@ module.exports = {
 
   output: {
     filename: 'bundle/[name].js',
+    chunkFilename: '[name].[id].lazy.js',
     path: path.resolve(__dirname, config.publicDir),
   },
 

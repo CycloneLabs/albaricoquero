@@ -1,6 +1,9 @@
 <template lang="pug">
   div
-    div logo
+    router-link(to="first") first
+    br
+    router-link(to="second") second
+    br
     button(@click = "logout") Выйти
 </template>
 
