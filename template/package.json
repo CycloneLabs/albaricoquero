@@ -49,6 +49,7 @@
     "pug-loader": "^2.4.0",
     "sass-loader": "^6.0.6",
     "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
