@@ -28,7 +28,6 @@
     font-family: sans-serif;
     height: 100vh;
     margin: 0;
-
   }
 
   .root {
