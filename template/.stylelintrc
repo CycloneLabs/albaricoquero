@@ -1,0 +1,37 @@
+---
+processors:
+- stylelint-processor-html
+
+plugins:
+- "stylelint-order"
+
+rules:
+  color-hex-case: "upper"
+  color-no-invalid-hex: true
+  comment-no-empty: true
+  declaration-bang-space-after: "never"
+  declaration-bang-space-before: "always"
+  declaration-block-semicolon-newline-after: "always-multi-line"
+  declaration-block-trailing-semicolon: "always"
+  function-comma-space-after: "always"
+  function-comma-space-before: "never"
+  indentation: 2
+  no-eol-whitespace: true
+  no-missing-end-of-source-newline: true
+  number-leading-zero: "always"
+  selector-class-pattern:
+  - "^.[-_a-z]+$"
+  - resolveNestedSelectors: true
+  selector-list-comma-newline-after: "always"
+  selector-list-comma-newline-before: "never-multi-line"
+  selector-max-id: 0
+  selector-max-type: 1
+  selector-no-vendor-prefix: true
+  selector-type-no-unknown: true
+  string-quotes: "double"
+  value-list-comma-space-after: "always"
+  value-list-comma-space-before: "never"
+  order/order:
+  - custom-properties
+  - declarations
+  order/properties-alphabetical-order: true
