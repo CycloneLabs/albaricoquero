@@ -1,11 +1,16 @@
 {
-  "plugins": ["syntax-dynamic-import"],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
+  ],
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
       }
-    }]
+    ]
   ],
   "env": {
     "test": {

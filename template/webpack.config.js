@@ -6,10 +6,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtraneousFileCleanupPlugin = require('webpack-extraneous-file-cleanup-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const { publicDir } = require(path.resolve(__dirname, 'config.json'));
 
 module.exports = {
+  mode: process.env.NODE_ENV,
+
   entry: {
     bundle: './js/main.js',
   },
@@ -38,7 +41,15 @@ module.exports = {
 
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
+        oneOf: [
+          {
+            resourceQuery: /^\?vue/,
+            use: ['pug-plain-loader']
+          },
+          {
+            use: ['raw-loader', 'pug-plain-loader']
+          },
+        ],
       },
 
       {
@@ -70,6 +81,8 @@ module.exports = {
   devtool: '#eval-source-map',
 
   plugins: [
+    new VueLoaderPlugin(),
+
     new CopyWebpackPlugin([
       { from: 'image', to: 'image' },
       { from: 'root', to: '' },
@@ -77,13 +90,13 @@ module.exports = {
 
     new CleanWebpackPlugin(path.resolve(__dirname, publicDir)),
 
-    new HtmlWebpackExcludeAssetsPlugin(),
-
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './view/index.pug',
       excludeAssets: [/.js/],
     }),
+
+    new HtmlWebpackExcludeAssetsPlugin(),
 
     new ExtraneousFileCleanupPlugin({
       extensions: ['.js'],
@@ -92,40 +105,20 @@ module.exports = {
   ],
 };
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    }),
-  ])
-} else {
+if (process.env.NODE_ENV === 'development') {
   module.exports.module.rules = [
     {
-      enforce: "pre",
+      enforce: 'pre',
       test: /\.vue$/,
       exclude: /node_modules/,
-      loader: "vue-pug-lint-loader",
+      loader: 'vue-pug-lint-loader',
       options: require('./.pug-lintrc.js'),
     },
     {
-      enforce: "pre",
+      enforce: 'pre',
       test: /\.(js|vue)$/,
       exclude: /node_modules/,
-      loader: "eslint-loader",
+      loader: 'eslint-loader',
       options: {
         formater: require('eslint-friendly-formatter'),
       }
@@ -134,7 +127,12 @@ if (process.env.NODE_ENV === 'production') {
 
    module.exports.plugins = (module.exports.plugins || []).concat([
     new StyleLintPlugin({
-      files: ['**/*.vue'],
+      files: ['**/*.vue']
     }),
   ]);
+} else {
+  module.exports.devtool = '#source-map';
+  module.exports.optimization = {
+    minimize: true,
+  };
 }

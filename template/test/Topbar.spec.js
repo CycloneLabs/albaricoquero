@@ -7,14 +7,14 @@ const localVue = createLocalVue();
 localVue.use(VueRouter);
 const router = new VueRouter();
 
-describe('Users.vue', () => {
+describe('Topbar.vue', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallowMount(Topbar, { localVue, router });
   });
 
-  it('Has valid template name in .logo', () => {
+  it('Has valid project title in .logo', () => {
     expect(wrapper.find('.logo').text()).to.equal('Albaricoquero');
   });
 });
