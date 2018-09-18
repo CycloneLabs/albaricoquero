@@ -120,6 +120,7 @@ if (process.env.NODE_ENV === 'development') {
       exclude: /node_modules/,
       loader: 'eslint-loader',
       options: {
+        fix: true,
         formater: require('eslint-friendly-formatter'),
       }
     }
@@ -127,7 +128,8 @@ if (process.env.NODE_ENV === 'development') {
 
    module.exports.plugins = (module.exports.plugins || []).concat([
     new StyleLintPlugin({
-      files: ['**/*.vue']
+      files: ['**/*.vue'],
+      fix: true,
     }),
   ]);
 } else {

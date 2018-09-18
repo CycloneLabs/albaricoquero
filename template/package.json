@@ -51,7 +51,6 @@
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.4.1",
