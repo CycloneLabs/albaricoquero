@@ -1,21 +1,17 @@
 # {{ name }}
+{{ description }}
 
-## {{ description }}
+## A Vue.js project
 
-### Fast start
-configure your settings by `config.json`
-use `npm install` to install dependencies
-and `npm run build` for build application once
-or  `npm run dev` for development with watchers and hot-reload
+### Fast start (development)
+- configure your settings in `config.json`
+- `npm install`
+- `npm run dev`
 
-### Sources structure
-`js` - directory with javascript sources.
-`root` - flat directory, for "root" sources like favicon.
-`view` - directory for pug files, may be hierarchical. (Excluding by underscore)
-`scss` - directory for scss files, may be hierarchical. (Excluding by underscore)
-`image` - directory for image sources, should be hierarchical.
+### Fast start (deployment)
+- configure your settings in `config.json`
+- `npm install`
+- `npm run build`
 
-### Compiled structure
-`/` - contains "root" sources and compiled pug files.
-`/image` - contains "image" sources
-`/bundle` - contains bundle.js and style.css with source maps
+### Configuration parameters
+... describe your configuration here ...

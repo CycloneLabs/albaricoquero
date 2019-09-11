@@ -1,4 +1,4 @@
 {
-  "publicDir": "./public",
-  "apiUrl": "https://jsonplaceholder.typicode.com"
+  "publicDir": "./dist",
+  "apiUrl": ""
 }

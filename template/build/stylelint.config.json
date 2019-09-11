@@ -4,6 +4,9 @@
     "stylelint-order"
   ],
   "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["each"]
+    }],
     "color-hex-case": "upper",
     "color-no-invalid-hex": true,
     "comment-no-empty": true,
