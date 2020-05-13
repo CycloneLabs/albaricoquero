@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" width="40" height="40">
+  <defs>
+    <path d="M20 0L0 10L0 30L20 40L40 30L40 10L20 0Z" id="d1UwMPHClW" />
+  </defs>
+  <g>
+    <g>
+      <g>
+        <use xlink:href="#d1UwMPHClW" opacity="1" fill="#11c3a2" fill-opacity="1" />
+      </g>
+    </g>
+  </g>
+</svg>
