@@ -1,6 +1,6 @@
 # Albaricoquero
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, js, pug and scss support.
+> A full-featured Webpack setup with hot-reload, unit tests, lint-on-save, lint-on-commit, ts, pug and scss support.
 > This template is Vue 2.0 compatible.
 
 ## Usage

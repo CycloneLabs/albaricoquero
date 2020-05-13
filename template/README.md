@@ -4,7 +4,7 @@
 
 ## Scripts
 
-- `npm run lint:js` runs eslint for all `.vue` and `.js` files in following directories: `src/`, `test/`, `build/`
+- `npm run lint:js` runs eslint for all `.vue`, `.js`, `.ts` files in following directories: `src/`, `test/`, `build/`
 - `npm run lint:css` runs stylelint for all `.vue` and `.scss` files in `src/` directory
 - `npm run lint` runs `npm run lint:js` and `npm run lint:css`
 - `npm run test` runs tests located in `test/` directory
