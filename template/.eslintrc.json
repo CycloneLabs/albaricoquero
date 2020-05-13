@@ -30,12 +30,9 @@
   "overrides": [
     {
       "files": ["test/**/*.js"],
-      "globals": {
-        "describe": true,
-        "it": true,
-        "test": true,
-        "expect": true
-      }
+      "extends": [
+        "plugin:jest/recommended"
+      ]
     },
     {
       "files": ["build/*.js"],
