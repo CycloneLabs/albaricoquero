@@ -1,0 +1,34 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      ignoreAtRules: ["/for/", "/function/", "/return/", "/each/"]
+    ],
+    "color-hex-case": "upper",
+    "color-no-invalid-hex": true,
+    "comment-no-empty": true,
+    "number-leading-zero": "always",
+    "selector-class-pattern": [
+      "^.[-_a-z]+$",
+      {
+        "resolveNestedSelectors": true
+      }
+    ],
+    "no-empty-source": true,
+    "no-invalid-double-slash-comments": null,
+    "selector-max-id": 0,
+    "selector-max-type": 1,
+    "selector-no-vendor-prefix": true,
+    "selector-type-no-unknown": true,
+    "string-quotes": "double",
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}

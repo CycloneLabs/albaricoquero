@@ -6,7 +6,7 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: 'Package name (lowercase, one word, may contain hyphens and underscores',
     },
 
     description: {
@@ -14,6 +14,12 @@ module.exports = {
       required: false,
       message: 'Project description',
       default: 'A Vue.js project',
+    },
+
+    appTitle: {
+      type: 'string',
+      message: 'App Title',
+      default: 'App Title',
     },
 
     autoInstall: {
