@@ -1,0 +1,9 @@
+(C) Medical Visual Systems LLC (MVS), 2021
+
+This software is the confidential and proprietary information of MVS.
+Any unauthorized use, including but not limited to copying, modifying, publishing,
+compiling, selling, or distributing this software, either as the source code or as a compiled binary,
+for any purpose, commercial or non-commercial, in whole or in part,
+without an express prior written consent of the copyright holder is prohibited.
+
+Please send your requests regarding the license agreement to the following e-mail address: mail@mvsystem.ru
